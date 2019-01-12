@@ -1,0 +1,2508 @@
+/**
+ * @file
+ * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+ *
+ * When you turn on CSS aggregation at admin/config/development/performance, all
+ * of these @include files will be combined into a single file.
+ */
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "init";
+
+/* HTML element (SMACSS base) rules */
+@import "normalize";
+
+/* Layout rules */
+@import "layouts/responsive";
+
+/* Component (SMACSS module) rules */
+@import "components/misc";
+// Optionally, add your own components here.
+@import "print";
+
+/* SMACSS theme rules */
+/* @import "theme-A"; */
+/* @import "theme-B"; */
+
+/* Eigen opmaak */
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// Kleuren
+$donkergrijs: rgb(62, 69, 67); // donkergrijs voor header, footer en zijbalk
+$rood: rgb(213, 0, 0); // rood
+$geel: rgb(250, 200, 35); // geel
+$wit: rgb(255, 255, 255); // wit
+$zwart: rgb(33, 33, 33); // zwart
+$lichtgrijs: rgb(234, 234, 234); // lichtgrijs
+$groen: rgb(0, 136, 39); // groen
+
+// Algemeen
+
+@font-face {
+    font-family:'Exo 2';
+    src: url('../font/exo2-light.eot'); /*A*/
+    src: url('../font/exo2-light.eot?#iefix') format('embedded-opentype'), /*B*/
+    url('../font/exo2-light.woff') format('woff'), /*C*/
+    url('../font/exo2-light.otf') format('opentype'), /*D*/
+    url('../font/exo2-light.svg') format('svg'); /*E*/
+    font-weight: 300;
+    // font-style: normal;
+}
+
+body {
+	background-color: $wit;
+	font-size: 100%;
+	font-family: $exo;
+    font-weight: 300;
+}
+
+* {
+	color: $zwart;
+}
+
+ul {
+	list-style-type: circle;
+}
+
+img {
+	display: block;
+}
+a {
+	color: $rood;
+	text-decoration: underline;
+}
+h1 a,
+h2 a,
+h3 a,
+nav a,
+div#captiontitel a,
+aside section.sidebar a,
+div#footer a,
+div.view-content a,
+div.view-display-id-block_3 div.view-footer p a,
+ul.flippy a,
+ul.pager a {
+	text-decoration: none;
+}
+h1 {
+	font-family: $sanchez;
+	color: $zwart;
+	font-weight: normal;
+	// text-transform: uppercase;
+	font-size: 1.4em; // h1 kleiner op klein scherm
+}
+div#content {
+	padding-bottom: 2em;
+}
+div#content p, div#content li {
+	font-size: 1.1em; // p in content groter op klein scherm
+	line-height: 1.7;
+}
+div#content h1#page-title {
+	margin-top: 1em;
+}
+h2 {
+	color: darken($rood, 10%);
+	text-transform: uppercase;
+	margin-bottom: .5em;
+	font-size: 1.2em;
+}
+h2 a {
+	color: darken($rood, 10%);
+}
+h3 {
+	color: $donkergrijs;
+	margin-bottom: .5em;
+	font-size: 1.1em;
+}
+
+article.node {
+	margin-top: 2em;
+}
+
+div#mainwrapper,
+div#footerwrapper,
+div#footer-top,
+div#footer-bottom {
+	background: none;
+	width: 100%;
+}
+
+div#main {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+// Homepage nieuws
+div.view-front-page-kopie div.view-content {
+	background: $lichtgrijs;
+	padding: 20px 10px;
+	margin-bottom: 4em;
+	border: 1px solid darken($lichtgrijs, 10%);
+	div#nieuws-homepage {
+		@include zen-grid-container;
+		$zen-column-count: 4;
+		$zen-gutter-width: 0;
+		$zen-auto-include-item-base: true;
+		overflow: hidden;
+		div#nieuws-afbeelding {
+			@include zen-grid-item(4, 1);
+			@include zen-clear();
+			margin-bottom: 2em;
+			a {
+				overflow: hidden;
+				display: block;
+				background: $donkergrijs;
+				img {
+					-webkit-transition: all .4s;
+					transition: all .4s;
+					&:hover, &:focus {
+						@include scale(1.1);
+						@include hoverafbeelding;
+					}
+				}
+			}
+		}
+		div#nieuws-tekst {
+			@include zen-grid-item(4, 1);
+			@include zen-clear();
+			h2 {
+				margin-top: 0;
+				font-weight: bold;
+				text-transform: initial;
+			}
+			p.created {
+				font-style: oblique;
+				font-size: 90%;
+				background: url('../images/icon-time.svg') no-repeat 0 50%;
+				padding-left: 30px;
+				margin-top: 0;
+			}
+			a.views-more-link {
+				display: block;
+			}
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+// Homepage Rode Leeuw en Documentatiecentrum
+div#contentwrapper {
+	@include zen-grid-container;
+	$zen-column-count: 2;
+	$zen-gutter-width: 0;
+	$zen-auto-include-item-base: true;
+	div#block-views-rode-leeuw-block {
+		@include zen-grid-item(2, 1);
+		@include zen-clear();
+		background: $lichtgrijs;
+		border: 1px solid darken($lichtgrijs, 10%);
+		// background-image: url('../images/stripe.png');
+		a {
+			display: block;
+			img {
+				margin: 0 auto;
+				-webkit-transition: all .4s;
+				transition: all .4s;
+				&:hover, &:focus {
+					@include scale(1.02);
+					@include box-shadow(rgba(#000, .7) 0 5px 5px);
+				}
+			}
+		}
+		h2 {
+			display: inline-block;
+			padding: 10px;
+			background: rgba($wit, .9);
+			margin-bottom: 1em;
+			border-right: 1px solid darken($lichtgrijs, 10%);
+			border-bottom: 1px solid darken($lichtgrijs, 10%);
+		}
+		div.views-field {
+			text-align: center;
+			span.field-content a {
+				color: $wit;
+				font-weight: bold;
+			}
+		}
+		div.view-footer p {
+			font-weight: bold;
+		}
+	}
+	div#block-views-c73fc8d7ea19ff208ba0b7d2315a28d1 {
+		@include zen-grid-item(2, 1);
+		@include zen-clear();
+		background: url('../images/documentatiecentrum.jpg') no-repeat 0 100%;
+		background-size: cover;
+		height: 500px;
+		position: relative;
+		-webkit-display: flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		border: 1px solid darken($lichtgrijs, 10%);
+		h2 {
+			padding: 10px;
+			background: rgba($wit, .9);
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-right: 1px solid darken($lichtgrijs, 10%);
+			border-bottom: 1px solid darken($lichtgrijs, 10%);
+		}
+		p {
+			color: $wit;
+			font-weight: bold;
+			font-size: 115%;
+			background: rgba($zwart, .8);
+			padding: 5px;
+			text-align: center;
+			span {
+				font-weight: bold;
+				color: $geel;
+			}
+		}
+		a#alle-tijdstippen-docu {
+			background: $rood;
+			color: $wit;
+			font-weight: bold;
+			padding: 10px;
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			-webkit-transition: all .4s;
+			transition: all .4s;
+			@include border-radius(5px);
+			&:hover, &:focus {
+				background: $wit;
+				color: $rood;
+			}
+		}
+	}
+}
+
+// Homepage view Rode Leeuw
+div#block-views-rode-leeuw-block div.view-rode-leeuw {
+	@include zen-grid-container;
+	$zen-column-count: 2;
+	$zen-gutter-width: 0;
+	$zen-auto-include-item-base: true;
+	div.view-content {
+		@include zen-grid-item(2, 1);
+		@include zen-clear();
+		div.views-field-title span.field-content a {
+			color: $zwart !important;
+		}
+	}
+	div.view-footer {
+		@include zen-grid-item(2, 1);
+		@include zen-clear();
+		padding: 0 1em;
+		p {
+			color: $zwart;
+		}
+	}
+}
+
+// Pager opmaak
+div.item-list ul.pager li {
+	display: inline-block;
+	font-weight: bold;
+	margin-bottom: 1em;
+	&.pager-current {
+		padding: .4em 1em;
+		background: $rood;
+		color: $wit;
+		@include border-radius(5px);
+		}
+		&.pager-first, &.pager-previous, &.pager-next, &.pager-last {
+			font-weight: normal;
+		}
+	a {
+		padding: .7em 1em;
+		&:hover, &:focus, {
+			color: $wit;
+			background: $rood;
+			@include border-radius(5px);
+		}
+	}
+}
+
+/* Flippy pagers */
+ul.flippy li.prev:hover,
+ul.flippy li.next:hover {
+	color: $wit;
+	background: $rood;
+	@include border-radius(5px);
+	a {
+		color: $wit;
+	}
+}
+
+// Header
+div#headerwrapper {
+	width: 100%;
+	background: $rood;
+}
+
+div#name-and-slogan {
+	width: 100%;
+	position: relative;
+	float: none;
+	clear: both;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	height: 80px;
+	h1#site-name {
+		line-height: 1.2;
+		text-transform: uppercase;
+		font-family: 'Libre Baskerville', serif;
+		font-size: 1.8em;
+		margin-left: 0;
+		a {
+			display: block;
+			margin: 0 auto;
+			font-size: 70%;
+			text-align: center;
+			text-decoration: none;
+			span {
+				color: $wit;
+			}
+		}
+		> span {
+			display: block;
+			margin: 0 auto;
+			font-size: 70%;
+			text-align: center;
+			text-decoration: none;
+			color: $wit;
+		}
+	}
+	div#site-slogan {
+		display: none;
+	}
+}
+
+// Navigatie
+div#navwrapper {
+	width: 100%;
+	background: $rood;
+	position: relative;
+	div#navigationwrapper div#navigation {
+		padding-left: 0; 
+		padding-right: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		nav#main-menu {
+			position: relative;
+			a.menu-toggle {
+				display: block;
+				width: 100%;
+				z-index: 20;
+				span.line {
+					display: block;
+					margin-right: 10px;
+					border-bottom: 3px solid $wit;
+					-webkit-transition: all .4s;
+					transition: all .4s;
+				}
+				&:hover span.first-line {
+					transform: translateY(-3px);
+				}
+				&:hover span.last-line {
+					transform: translateY(3px);
+				}
+				span.toggle-help {
+					display: none;
+				}
+			}
+			ul#main-menu {
+				background: $zwart;
+				position: absolute;
+				top: 235px;
+				z-index: 1000;
+				width: 100%;
+				li {
+					display: block;
+					float: none;
+					text-transform: uppercase;
+					border-bottom: 1px solid $donkergrijs;
+					a {
+						display: block;
+						color: $wit;
+						font-size: 120%;
+						padding: .5em 10px;
+						&:hover, &:focus, &:active, &.active {
+							color: $geel;
+						}
+					}
+					ul li {
+						font-size: 80%;
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
+	div#logo {
+		overflow: hidden;
+		padding: 0 auto;
+		position: relative;
+		a#logo {
+			width: 100%;
+			z-index: 30;
+			img {
+				margin: 1em auto 0;
+			}
+		}
+		> img {
+			margin: 1em auto 0;
+		}
+	}
+}
+
+// Highlightedwrapper
+div#highlightedwrapper {
+	display: block;
+	width: 100%;
+	background: $wit;
+	border-bottom: 1px solid darken($lichtgrijs, 10%);
+	div#highlighted {
+		max-width: 1200px;
+		margin: 0 auto;
+		background: $lichtgrijs;
+		div.region-highlighted div#block-views-kalender-block-3 {
+			display: block;
+			margin-bottom: 0;
+			div.view-kalender {
+				@include zen-grid-container;
+				$zen-column-count: 4;
+				$zen-gutter-width: 0;
+				$zen-auto-include-item-base: true;
+				div.view-header {
+					@include zen-grid-item(4, 1);
+					@include zen-clear();
+					padding: 2em;
+					p {
+						text-align: left;
+						color: $zwart;
+						font-size: 120%;
+						line-height: 1.7;
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+				}
+				div.view-content {
+					@include zen-grid-item(4, 1);
+					@include zen-clear();
+				}
+				div.view-footer {
+					@include zen-grid-item(4, 1);
+					@include zen-clear();
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// Flexslider
+div.flexslider {
+	margin: 0;
+	background: none;
+	border: none;
+	position: relative;
+	zoom: 1;
+	ul.slides div.views-field.views-field-field-afbeelding {
+		margin-bottom: 0;
+	}
+	div#captionwrapper {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		margin: 0;
+		background: $donkergrijs;
+		opacity: .8;
+		div#captiontitel {
+			overflow: hidden;
+			text-align: center;
+			background: $zwart;
+			width: 100%;
+			margin: 0 auto;
+			padding: .5em;
+			a {
+				text-transform: none;
+				color: $wit;
+				font-weight: normal;
+				font-size: 100%;
+			}
+			p {
+				text-align: center;
+				text-transform: none;
+				color: $wit;
+				font-weight: normal;
+				font-size: 100%;
+				line-height: 1.4;
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+			span {
+				text-align: center;
+				text-transform: none;
+				font-weight: normal;
+				color: $geel;
+			}
+			div.date-display-range {
+				color: $geel;
+			}
+		}
+	}
+	ul.flex-direction-nav a  {
+	    line-height: 40px; //Fix om navigatiepijlen volledig te tonen (werden afgekapt aan bovenkant)
+	    color: $wit;
+	}
+}
+
+div.date-nav-wrapper {
+	display: none;
+}
+
+// Zoekfunctie
+div.region-navigation {
+	height: 50px;
+	width: auto;
+	margin: 150px 10px 0;
+	position: relative;
+	z-index: 10;
+	div#block-search-form {
+		// 
+		div.form-item-search-block-form input#edit-search-block-form--2 {
+			width: 100%;
+			height: 30px;
+			border: 1px solid $zwart;
+			padding-left: 10px;
+			@include border-radius(5px);
+			@include box-shadow(rgba(#000, .7) 2px 2px 5px);
+		}
+	}
+}
+
+form#search-block-form div.container-inline {
+	position: relative;
+		div.form-wrapper {
+		position: absolute;
+		top: 3px;
+		right: 10px;
+	}
+}
+
+// Views algemeen
+div.views-field-field-afbeelding {
+	margin-bottom: 1em;
+}
+
+// View archiefbegeleiding
+div#main div#content.column div#contentwrapper {
+	@include zen-grid-container;
+	$zen-column-count: 2;
+	$zen-gutter-width: 30px;
+	$zen-auto-include-item-base: true;
+	div#block-views-kalender-block-5 {
+		@include zen-grid-item(2, 1);
+		padding-left: 0;
+		padding-right: 0;
+		h2 {
+			margin-top: 0;
+			margin-bottom: 2em;
+		}
+	}
+	div#block-block-7 {
+		@include zen-grid-item(2, 1);
+		@include zen-clear();
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// Recentste tijdschrift
+div#main div#content.column div#contentwrapper div.view.view-recentste-tijdschrift {
+	@include zen-grid-container;
+	$zen-column-count: 3;
+	$zen-gutter-width: 0;
+	div.view-header {
+		@include zen-grid-item(3, 1);
+	}
+	div.view-content {
+		@include zen-clear();
+		@include zen-grid-item(3, 1);
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+}
+
+// View "Tijdschrift vanaf 2010"
+div.view-tijdschriften div.views-row {
+	margin-bottom: 4em;
+}
+div.view-tijdschriften h3 {
+	font-size: 200%;
+}
+
+// View "Nieuwsartikels"
+div#content div.view-id-nieuwsartikels div.view-content {
+	//
+	div.views-row {
+		margin-top: 4em;
+		div.views-field-title {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 120%;
+		}
+		div.views-field-created {
+			margin-bottom: 1em;
+			span.field-content {
+				font-style: oblique;
+				font-size: 90%;
+				background: url('../images/icon-time.svg') no-repeat 0 50%;
+				padding-left: 30px;
+			}
+		}
+		div.views-field-field-afbeelding div.field-content {
+			background: $donkergrijs;
+			overflow: hidden;
+			img {
+				-webkit-transition: all .4s;
+				transition: all .4s;
+				&:hover, &:focus {
+					@include scale(1.1);
+					@include hoverafbeelding;
+				}
+			}
+		}
+		div.views-field-body div.field-content a.views-more-link {
+			display: block;
+		}
+	}
+	div.views-row-first {
+		margin-top: 2em;
+	}
+}
+
+// Node Nieuwsartikel
+article.node-nieuws {
+	margin-top: 0;
+	header p.submitted {
+		font-style: oblique;
+		margin-top: 0;
+	}
+}
+
+div.column div.view-nieuwsartikels div.field-content,
+div.column article.node-nieuws div.field-item {
+	//
+	p img {
+		margin-bottom: 10px;
+	}
+	p:first-child::first-letter {
+		display: block;
+		float: left;
+		font-size: 420%;
+		margin: 0 5px 0 0;
+		color: $rood;
+		line-height: .7;
+		letter-spacing: 2px;
+		font-family: 'Patua One', cursive;
+	}
+}
+
+// Exposed form voor keuze jaar en inhoud titel van nieuwsartikels
+form#views-exposed-form-nieuwsartikels-page-1 div.views-exposed-form div.views-exposed-widgets {
+	@include zen-grid-container;
+	$zen-column-count: 6;
+	$zen-gutter-width: 30px;
+	padding-right: 0;
+	div#edit-date-filter-wrapper {
+		@include zen-grid-item(3, 1);
+		padding-left: 0;
+		div.form-item {
+			width: 100%;
+			margin: 0;
+			div#edit-date-filter-value {
+				width: 100%;
+				select {
+					border: 2px solid darken($lichtgrijs, 20%);
+					background: $lichtgrijs;
+					width: 100%;
+					height: 40px;
+				}
+			}
+		}
+	}
+	div#edit-keys-wrapper {
+		@include zen-grid-item(3, 4);
+		padding-right: 0;
+		input {
+			border: 2px solid darken($lichtgrijs, 20%);
+			background: $lichtgrijs;
+			padding: 10px;
+			width: 100%;
+			height: 40px;
+		}
+	}
+	div.views-submit-button {
+		@include zen-clear();
+		@include zen-grid-item(6, 1);
+		padding-left: 0;
+		padding-right: 0;
+		input#edit-submit-nieuwsartikels {
+			border: 2px solid $groen;
+			color: $groen;
+			background: $wit;
+			font-weight: bold;
+			width: 100%;
+			height: 40px;
+			-webkit-transition: all .4s;
+			transition: all .4s;
+			&:hover, &:focus {
+				color: $wit;
+				background: $groen;
+			}
+		}
+	}
+}
+
+// Tabellen tijdschrift alfabetisch en tabellen artikels per tijdschrift: titel met link zichtbaar maken
+table.views-table.cols-4 td.views-field-nothing a,
+table.views-table.cols-3 td.views-field-nothing a {
+	color: $rood;
+	font-weight: bold;
+}
+
+// Exposed form voor keuze inhoud titel en artikel auteur van artikels rode leeuw
+form#views-exposed-form-artikels-rode-leeuw-page div.views-exposed-form div.views-exposed-widgets {
+	@include zen-grid-container;
+	$zen-column-count: 4;
+	$zen-gutter-width: 30px;
+	div#edit-title-wrapper {
+		@include zen-grid-item(2, 1);
+		padding-left: 0;
+		input {
+			border: 2px solid darken($lichtgrijs, 20%);
+			background: $lichtgrijs;
+			width: 100%;
+			height: 40px;
+			padding: 5px;
+		}
+	}
+	div#edit-field-auteur-tid-wrapper {
+		@include zen-grid-item(2, 3);
+		padding-right: 0;
+		select {
+			border: 2px solid darken($lichtgrijs, 20%);
+			background: $lichtgrijs;
+			width: 100%;
+			height: 40px;
+			padding: 5px;
+		}
+		div.description {
+			display: none;
+		}
+	}
+	div.views-submit-button {
+		@include zen-clear();
+		@include zen-grid-item(4, 1);
+		padding-left: 0;
+		padding-right: 0;
+		input#edit-submit-artikels-rode-leeuw {
+			border: 2px solid $groen;
+			color: $groen;
+			background: $wit;
+			font-weight: bold;
+			width: 100%;
+			height: 40px;
+			-webkit-transition: all .4s;
+			transition: all .4s;
+			&:hover, &:focus {
+				color: $wit;
+				background: $groen;
+			}
+		}
+	}
+}
+
+// Exposed form voor keuze inhoud collectie
+form#views-exposed-form-collectie-page div.views-exposed-form div.views-exposed-widgets {
+	@include zen-grid-container;
+	$zen-column-count: 6;
+	$zen-gutter-width: 30px;
+	div#edit-keys-wrapper {
+		@include zen-grid-item(6, 1);
+		@include zen-clear();
+		padding-left: 0;
+		padding-right: 0;
+		input {
+			border: 2px solid darken($lichtgrijs, 20%);
+			background: $lichtgrijs;
+			width: 100%;
+			height: 40px;
+			padding: 5px;
+		}
+	}
+	div.views-exposed-widget.views-submit-button {
+		@include zen-grid-item(6, 1);
+		padding-left: 0;
+		@include zen-clear();
+		padding-left: 0;
+		padding-right: 0;
+		input#edit-submit-collectie {
+			border: 2px solid $groen;
+			background: $wit;
+			color: $groen;
+			font-weight: bold;
+			width: 100%;
+			height: 40px;
+			-webkit-transition: all .4s;
+			transition: all .4s;
+			&:hover, &:focus {
+				background: $groen;
+				color: $wit;
+			}
+		}
+	}
+}
+
+// View "Raad van bestuur"
+div.view-raad-van-bestuur {
+	margin-top: 2em;
+	color: $zwart;
+	div.view-content div.views-row {
+		margin-bottom: 4em;
+		div.contactpersoon {
+			@include zen-grid-container;
+			$zen-column-count: 4;
+			$zen-gutter-width: 30px;
+			$zen-auto-include-item-base: true;
+			div.contactpersoonafbeelding {
+				@include zen-grid-item(4, 1);
+				padding-left: 0;
+			}
+			div.contactpersoongegevens {
+				@include zen-clear();
+				@include zen-grid-item(4, 1);
+				padding-left: 0;
+				h2 {
+					margin-top: .4em;
+					margin-bottom: 0;
+				}
+				h3 {
+					color: lighten($zwart, 20%);
+					margin-top: 0;
+					margin-bottom: .5em;
+				}
+				p {
+					margin-top: 0;
+					margin-bottom: 0;
+					font-size: 120%;
+				}
+			}
+		}
+	}
+}
+
+// Zijbalk
+aside.sidebars section {
+	margin-top: 0;
+	margin-bottom: 4em;
+	h2 {
+		color: $zwart;
+		background: $lichtgrijs;
+		padding: 4%;
+		margin-top: 1em;
+		margin-bottom: 0;
+		font-size: 140%;
+		border-top: 1px solid darken($lichtgrijs, 10%);
+		border-left: 1px solid darken($lichtgrijs, 10%);
+		border-right: 1px solid darken($lichtgrijs, 10%);
+	}
+}
+
+div.zijbalkblok {
+	color: $zwart;
+	padding: 1em .5em 2em;
+	background: $lichtgrijs;
+	border-bottom: 1px solid darken($lichtgrijs, 10%);
+	border-left: 1px solid darken($lichtgrijs, 10%);
+	border-right: 1px solid darken($lichtgrijs, 10%);
+	div.views-row {
+		margin-bottom: 1.5em;
+		div.views-field-created,
+		div.views-field-field-tijdstip {
+			font-style: oblique;
+			font-size: 90%;
+		}
+		a {
+			color: $rood;
+		}
+	}
+	div.more-link a {
+		color: $wit;
+		background: $rood;
+		font-weight: bold;
+		font-size: 90%;
+		border: 1px solid $rood;
+		@include border-radius(5px);
+		-webkit-transition: all .4s;
+		transition: all .4s;
+		padding: 10px;
+		&:hover, &:focus {
+			background: $wit;
+			color: $rood;
+		}
+	}
+}
+
+div.secundair-menu {
+	display: none;
+}
+
+// Contactpagina
+div#contentwrapper div#contactpagina {
+	@include zen-grid-container;
+	$zen-column-count: 2;
+	$zen-gutter-width: 0;
+	$zen-auto-include-item-base: true;
+	div#lidworden {
+		@include zen-grid-item(2, 1);
+		height: 400px;
+		background: url('../images/documentatiecentrum.jpg') no-repeat 0 100%;
+		background-size: cover;
+		padding: 0;
+		margin-bottom: 2em;
+		margin-top: 2em;
+		position: relative;
+		p {
+			background: rgba($wit, .8);
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			padding: 1em;
+			margin-bottom: 0;
+			color: $zwart;
+			font-weight: bold;
+			span {
+				text-transform: uppercase;
+				color: $rood;
+			}
+		}
+	}
+	div#lokatie {
+		@include zen-clear();
+		@include zen-grid-item(2, 1);
+		p, li, strong {
+			color: $zwart;
+		}
+	}
+	div#contact {
+		@include zen-clear();
+		@include zen-grid-item(2, 1);
+		background: $lichtgrijs;
+		padding: 1em;
+		margin-bottom: 2em;
+		margin-top: 2em;
+		p, li {
+			color: $zwart;
+		}
+		form#webform-client-form-32 {
+			margin-bottom: 2em;
+			input, textarea {
+				border: 2px solid darken($lichtgrijs, 20%);
+				padding: 10px;
+				&:focus {
+					@include box-shadow(rgba(250, 0, 0, 1) 0 0 3px);
+				}
+			}
+			textarea {
+				resize: none;
+			}
+			input.form-submit {
+				width: 100%;
+				font-weight: bold;
+				text-transform: uppercase;
+				@include border-radius(5px);
+				background-color: $rood;
+				color: $wit;
+				border: 2px solid $rood;
+				height: 3em;
+				-webkit-transition: all .4s;
+				transition: all .4s;
+				letter-spacing: 2px;
+				&:hover, &:focus {
+					color: $rood;
+					background-color: $wit;
+				}
+			}
+		}
+	}
+}
+
+// Over ons
+blockquote {
+	font-family: Georgia, serif;
+	font-size: 130%;
+	font-style: oblique;
+	letter-spacing: 1.1;
+	line-height: 1.4;
+	position: relative;
+	margin-top: 2em;
+	&:before {
+		display: block;
+		content: "\201C";
+		font-size: 4em;
+		position: absolute;
+		left: -30px;
+		top: -40px;
+		color: $rood;
+	}
+	p {
+		color: lighten($donkergrijs, 20%);
+		font-family: $exo;
+		font-weight: bold;
+		margin-left: 1em;
+	}
+}
+
+// Documentatiecentrum
+div#block-views-kalender-block-4.block.block-views div.view.view-kalender.view-id-kalender.view-display-id-block_4 div.view-content,
+div#block-views-kalender-block-5.block.block-views div.view.view-kalender.view-id-kalender.view-display-id-block_5 div.view-content {
+	background: $lichtgrijs;
+	padding: 1em;
+	text-align: center;
+	@include border-radius(5px);
+	div.views-row div.views-field div.field-content span.date-display-single {
+		color: $zwart;
+		div.date-display-range {
+			display: inline;
+			color: $zwart;
+			span {
+				color: $zwart;
+			}
+		}
+	}
+}
+div#block-views-kalender-block-4.block.block-views div.view.view-kalender.view-id-kalender.view-display-id-block_4 div.date-nav-wrapper {
+	display: none;
+}
+
+// Lid worden
+article.node-77 h3 + p {
+	margin-top: .5em;
+	margin-bottom: 4em;
+}
+
+// Evenementenagenda
+article.node-evenement {
+	// 
+	div.field-name-field-afbeelding {
+		margin-bottom: 1em;
+	}
+	div.field-name-field-tijdstip {
+		font-weight: bold;
+		font-size: 120%;
+		color: darken($wit, 50%);
+	}
+	div.field-name-field-plaats {
+		font-variant: oblique;
+		font-size: 120%;
+		color: darken($wit, 60%);
+		margin-top: .5em;
+		margin-bottom: 2em;
+	}
+	div.field.field-name-body div.field-items div.field-item.even p {
+		max-width: 800px;
+	}
+	div.field-name-field-openingsuren {
+		color: $zwart;
+		& p {
+			margin: 0;
+		}
+	}
+	div.field-name-field-toegangsprijs {
+		color: $zwart;
+		& p {
+			margin: 0;
+		}
+	}
+	div.field-name-field-website {
+		margin-top: 2em;
+		margin-bottom: 4em;
+		a {
+			font-size: 1.1em;
+			line-height: 1.8;
+		}
+	}
+	div.field-label {
+		width: 150px;
+		font-size: 1.1em;
+		line-height: 1.8;
+	}
+}
+
+div.view-display-id-page_4.view-kalender div.views-row {
+	clear: both;
+	margin-top: 2em;
+	margin-bottom: 4em;
+	overflow: hidden;
+	div.views-field span.field-content {
+		@include zen-grid-container;
+		$zen-column-count: 4;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		display: block;
+		div#agendafoto {
+			@include zen-clear();
+			@include zen-grid-item(4, 1);
+			padding: 0;
+			div#omtrek {
+				max-width: 340px;
+				max-height: 255px;
+				overflow: hidden;
+				background: $donkergrijs;
+				img {
+					-webkit-transition: all .4s;
+					transition: all .4s;
+					&:hover, &:focus {
+						@include scale(1.1);
+						@include hoverafbeelding;
+					}
+				}
+			}
+		}
+		div#agendagegevens {
+			@include zen-clear();
+			@include zen-grid-item(4, 1);
+			padding-left: 0;
+			h2 {
+				margin-top: 0;
+				a {
+					font-size: 110%;
+					text-transform: initial;
+				}
+			}
+			h3 {
+				margin-top: 0;
+				font-size: 110%;
+			}
+			p {
+				font-size: 100%;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+// View "Jaargangen met inhoud"
+div.view-tijdschriften div.view-content {
+	h3 {
+		clear: both;
+	}
+	@include zen-grid-container;
+	$zen-column-count: 4;
+	$zen-gutter-width: 30px;
+	$zen-auto-include-item-base: true;
+	div.views-row {
+		border: 1px solid transparent;
+		padding: 10px;
+		&:hover, &:focus {
+			border: 1px solid $donkergrijs;
+			background: $lichtgrijs;
+		}
+		a {
+			display: block;
+			text-align: center;
+			color: $zwart;
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+	div.views-row-1 {
+		@include zen-clear();
+		@include zen-grid-item(4, 1);
+	}
+	div.views-row-2 {
+		@include zen-clear();
+		@include zen-grid-item(4, 1);
+	}
+	div.views-row-3 {
+		@include zen-clear();
+		@include zen-grid-item(4, 1);
+	}
+	div.views-row-4 {
+		@include zen-clear();
+		@include zen-grid-item(4, 1);
+	}
+}
+
+// Tabellen tijdschrift
+table.views-table thead tr th {
+	background: $zwart;
+	color: $wit;
+	padding: 10px;
+	a {
+		color: $wit;
+	}
+}
+table.views-table tbody tr.odd {
+	background: #EEE;
+}
+table.views-table tbody tr.even {
+	background: #D4D4D4;
+}
+table.views-table td {
+	padding: 10px;
+	vertical-align: top;
+	color: $zwart;
+	font-size: 90%;
+	a {
+		color: $zwart;
+	}
+}
+table.cols-4 tbody tr td div a {
+	color: $zwart;
+}
+
+// View bidprentjes
+div#bidprentjes {
+	display: none;
+}
+
+// Linkspagina
+article.node-160 a:visited {
+	color: purple;
+}
+div.field.field-name-body div.field-items div.field-item h2 {
+	text-transform: initial;
+}
+
+// Digitale stamboom
+.kwartierblad {
+	position: relative;
+	margin: 0 auto;
+	padding-top: 0;
+	overflow: hidden;
+	clear: left;
+	height: 90vh;
+}
+
+.kwartierblad iframe {
+	position: absolute;
+	margin: 0 auto;
+   	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+// Footer top
+div#footer {
+	background: $lichtgrijs;
+	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 0;
+	border-top: 1px solid darken($lichtgrijs, 10%);
+	div#footer-top {
+		padding-left: 0;
+		padding-right: 0;
+		div.region-footer-top {
+			max-width: 1200px;
+			margin: 0 auto;
+			div#block-block-2 {
+				@include zen-clear;
+				@include zen-grid-container;
+				$zen-column-count: 4;
+				$zen-gutter-width: 30px;
+				$zen-auto-include-item-base: true;
+				div#genk {
+					@include zen-grid-item(4, 1);
+					padding-bottom: 2em;
+				}
+				div#fv-vlaanderen {
+					@include zen-clear();
+					@include zen-grid-item(4, 1);
+					padding-bottom: 2em;
+				}
+				div#vlaanderen {
+					@include zen-clear();
+					@include zen-grid-item(4, 1);
+					padding-bottom: 2em;
+				}
+				div#limburg {
+					@include zen-clear();
+					@include zen-grid-item(4, 1);
+					padding-bottom: 2em;
+				}
+				padding-top: 2em;
+				div#genk, div#fv-vlaanderen, div#vlaanderen, div#limburg {
+					a {
+						opacity: .8;
+						-webkit-transition: all .4s;
+						transition: all .4s;
+						&:hover, &:focus {
+							opacity: 1;
+						}
+					}
+					img {
+						margin: 0 auto;
+						height: 120px;
+					}
+				}
+			}
+		}
+	}
+	div#footer-bottom {
+		padding-left: 0;
+		padding-right: 0;
+		div.region-footer-bottom {
+			@include zen-grid-container;
+			$zen-column-count: 2;
+			$zen-gutter-width: 30px;
+			$zen-auto-include-item-base: true;
+			padding-top: 2em;
+			margin: 0 auto;
+			background: url('../images/bottom_bg.png') repeat;
+			div#block-block-1 {
+				@include zen-grid-item(2, 1);
+				a, p {
+					color: $wit;
+					text-align: center;
+				}
+			}
+			div#block-block-3 {
+				@include zen-clear();
+				@include zen-grid-item(2, 1);
+				p {
+					text-align: center;
+					margin-bottom: .5em;				
+					a {
+						display: block;
+						margin: 0 auto;
+						width: 150px;
+						height: 50px;
+						line-height: 46px;
+						text-transform: uppercase;
+						color: $wit;
+						border: 2px solid $wit;
+						-webkit-transition: all 1s;
+						transition: all 1s;
+					}
+					a:hover, a:focus {
+						@include border-radius(30px);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Back to top
+p#back-top a span#button {
+	background-color: lighten($rood, 30%);
+	&:hover, &:focus {
+		background-color: $rood;
+	}
+}
+
+/* ****************************** Min-width is 400px ************************************ */
+@media only screen and (min-width: 400px) {
+}
+
+/* ****************************** Min-width is 480px ************************************ */
+@media only screen and (min-width: 480px) {
+
+	// View "Jaargangen met inhoud"
+	div.view-tijdschriften div.view-content {
+		@include zen-grid-container;
+		$zen-column-count: 4;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div.views-row {
+			//
+		}
+		div.views-row-1 {
+			@include zen-grid-item(2, 1);
+		}
+		div.views-row-2 {
+			clear: none;
+			@include zen-grid-item(2, 3);
+		}
+		div.views-row-3 {
+			@include zen-clear();
+			@include zen-grid-item(2, 1);
+		}
+		div.views-row-4 {
+			clear: none;
+			@include zen-grid-item(2, 3);
+		}
+	}
+}
+
+/* ****************************** Min-width is 600px ************************************ */
+@media only screen and (min-width: 600px) {
+
+	// Zoekfunctie
+	div.region-navigation {
+		width: 200px;
+		margin: 0;
+		position: absolute;
+		top: 105px;
+		right: 20px;
+	}
+	div#navwrapper div#navigationwrapper {
+		//
+		div#navigation nav#main-menu ul#main-menu {
+			top: 145px;
+		}
+		div#logo {
+			width: 200px;
+			float: left;
+			z-index: 30;
+			a#logo {
+				margin-bottom: 1em;
+				padding-top: 0;
+			}
+			> img {
+				margin-bottom: 1em;
+				padding-top: 0;	
+			}
+		}
+	}
+
+	// Slogan
+	header#header {
+		position: relative;
+	}
+
+	div#name-and-slogan {
+		height: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+		width: auto;
+		position: absolute;
+		top: 40px;
+		left: 170px;
+		float: left;
+		clear: none;
+		margin-top: 0;
+		margin-bottom: 0;
+		h1#site-name {
+			//
+			a {
+				font-size: 90%;
+			}
+			> span {
+				font-size: 90%;
+			}
+		}
+		div#site-slogan {
+			display: block;
+			p {
+				color: $lichtgrijs;
+				font-weight: bold;
+				font-size: 100%;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				text-align: left;
+				font-size: 97%;
+				margin: 0;
+				span {
+					display: inline;
+					clear: none;
+					float: right;
+					margin-left: 1em;
+					letter-spacing: 1px;
+					color: $geel;
+				}
+			}		
+		}
+	}
+
+	// Highlightedwrapper
+	div#highlightedwrapper {
+		//
+		div#highlighted {
+			//
+			div.region-highlighted div#block-views-kalender-block-3 {
+				display: block;
+				div.view-kalender {
+					@include zen-grid-container;
+					$zen-column-count: 4;
+					$zen-gutter-width: 0;
+					$zen-auto-include-item-base: true;
+					-webkit-display: flex;
+					display: flex;
+					-webkit-align-items: center;
+					align-items: center;
+					div.view-header {
+						@include zen-grid-item(2, 1);
+						clear: none;
+						padding: 0 2em;
+						p {
+							font-size: 120%;
+							width: 100%;
+						}
+					}
+					div.view-content {
+						@include zen-grid-item(2, 3);
+						clear: none;
+						background: $donkergrijs;
+						div.flexslider {
+							@include box-shadow(none);
+							width: 100%;
+						}
+					}
+					div.view-footer {
+						// 
+					}
+				}
+			}
+		}
+	}
+	
+	// Flexslider
+	div#flexslider-1 {
+		@include zen-grid-container;
+		$zen-column-count: 1;
+		$zen-gutter-width: 0;
+		$zen-auto-include-item-base: true;
+		ul.slides {
+			@include zen-grid-item(1, 1);
+		}
+	}
+
+	// Homepage nieuws
+	div.view-front-page-kopie div.view-content div#nieuws-homepage{
+		@include zen-grid-container;
+		$zen-column-count: 4;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div#nieuws-afbeelding {
+			@include zen-grid-item(2, 1);
+			clear: none;
+			margin-bottom: 0;
+		}
+		div#nieuws-tekst {
+			@include zen-grid-item(2, 3);
+			clear: none;
+		}
+	}
+
+	// Secundair menu
+	div.secundair-menu {
+		display: block;
+		background: none;
+		margin-top: 1em;
+		padding: 0;
+		div.menu-block-1 > ul.menu {
+			width: 100%;
+			padding: 0;
+			> li {
+				list-style-type: none;
+				list-style-image: none;
+				margin-bottom: 5px;
+				padding: 0;
+				background: $geel;
+				> a:link, > a:visited {
+					display: block;
+					color: $zwart;
+					font-size: 100%;
+					padding: 1em .8em;
+					font-weight: 100;
+					text-transform: uppercase;
+					-webkit-transition: all .3s;
+					transition: all .3s;
+					&:hover, &:focus, &.active, &.is-active-trail {
+						background: darken($geel, 10%);
+						color: $zwart;
+					}
+				}
+			}
+		}
+	}
+
+
+	div.secundair-menu div.menu-block-1 ul.menu li ul.menu {
+		width: 100%;
+		padding: 0;
+		display: none;
+		li {
+			list-style-type: none;
+			list-style-image: none;
+			background: $lichtgrijs;
+			a:link, a:visited {
+				display: block;
+				color: $zwart;
+				font-size: 80%;
+				padding: 1em;
+				font-weight: 100;
+				text-transform: uppercase;
+				-webkit-transition: all .3s;
+				transition: all .3s;
+			}
+		}
+	}
+
+	div.secundair-menu div.menu-block-1 ul.menu li.is-active-trail ul.menu {
+		display: block;
+	}
+
+	// Sticky footer
+	html, body, div#page {
+		height: 100%;
+	}
+
+	div#page {
+		margin: 0 auto -420px;
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		position: relative;
+	}
+	div#footerwrapper {
+		height: 420px;
+		position: relative;
+	}
+	div#push {
+		height: 420px;
+	}
+
+	// Footer
+	div#footer {
+		// height: 420px;
+		div#footer-top {
+			height: auto;
+			div.region-footer-top {
+				// height: 200px;
+				padding-top: 1em;
+				div#block-block-2 {
+					$zen-column-count: 4;
+					div#genk {
+						@include zen-grid-item(1, 1);
+						margin-top: 1em;
+						margin-bottom: 0;
+					}
+					div#fv-vlaanderen {
+						clear: none;
+						@include zen-grid-item(1, 2);
+						margin-top: 1em;
+						margin-bottom: 0;
+					}
+					div#vlaanderen {
+						clear: none;
+						@include zen-grid-item(1, 3);
+						margin-top: 1em;
+						margin-bottom: 0;
+					}
+					div#limburg {
+						clear: none;
+						@include zen-grid-item(1, 4);
+						margin-top: 1em;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		div#footer-bottom {
+			div.region-footer-bottom {
+				height: 220px;
+				$zen-column-count: 2;
+				div#block-block-1 {
+					@include zen-grid-item(1, 1);
+				}
+				div#block-block-3 {
+					clear: none;
+					@include zen-grid-item(1, 2);
+				}
+			}
+		}
+	}
+}
+
+/* ****************************** Min-width is 750px ************************************ */
+@media only screen and (min-width: 751px) {
+
+	// Homepage Rode Leeuw en Documentatiecentrum
+	div#contentwrapper {
+		@include zen-grid-container;
+		$zen-column-count: 2;
+		$zen-gutter-width: 0;
+		$zen-auto-include-item-base: true;
+		div#block-views-rode-leeuw-block {
+			@include zen-grid-item(1, 1);
+			clear: none;
+			height: 500px;
+		}
+		div#block-views-c73fc8d7ea19ff208ba0b7d2315a28d1 {
+			@include zen-grid-item(1, 2);
+			clear: none;
+		}
+	}
+
+	// Tabellen tijdschrift alfabetisch
+	table.views-table.cols-4 thead tr th.views-field-title {
+		width: 40%;
+	}
+	table.views-table.cols-4 thead tr th.views-field-field-auteur {
+		width: 25%;
+	}
+	table.views-table.cols-4 thead tr th.views-field-field-pagina {
+		width: 10%;
+	}
+	table.views-table.cols-4 thead tr th.views-field-field-tijdschrift {
+		width: 25%;
+	}
+
+	// Tabellen tijdschrift per nummer
+	table.views-table.cols-3 thead tr th.views-field-title {
+		width: 65%;
+	}
+	table.views-table.cols-3 thead tr th.views-field-field-pagina {
+		width: 10%;
+	}
+	table.views-table.cols-3 thead tr th.views-field-field-auteur {
+		width: 25%;
+	}
+
+	// Tabellen collectie
+	table.views-table.sticky-enabled.cols-6 {
+		width: 100%;
+		word-wrap: break-all;
+		table-layout: fixed;
+	}
+	table.views-table.sticky-enabled.cols-6 thead tr th.views-field-title {
+		width: 25%;
+	}
+	table.views-table.sticky-enabled.cols-6 thead tr th.views-field-field-typecollectie {
+		width: 20%;
+	}
+	table.views-table.sticky-enabled.cols-6 thead tr th.views-field-field-schrijver {
+		width: 25%;
+	}
+	table.views-table.sticky-enabled.cols-6 thead tr th.views-field-field-jaargangcollectie {
+		width: 10%;
+	}
+	table.views-table.sticky-enabled.cols-6 thead tr th.views-field-field-jaarcollectie {
+		width: 10%;
+	}
+	table.views-table.sticky-enabled.cols-6 thead tr th.views-field-field-nummercollectie {
+		width: 10%;
+	}
+}
+
+/* ****************************** Min-width is 760px ************************************ */
+@media only screen and (min-width: 760px) {
+
+	// View "Raad van bestuur"
+	div.view-raad-van-bestuur div.view-content div.views-row div.contactpersoon {
+		@include zen-grid-container;
+		$zen-column-count: 3;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div.contactpersoonafbeelding {
+			@include zen-grid-item(1, 1);
+			padding-left: 0;
+		}
+		div.contactpersoongegevens {
+			clear: none;
+			@include zen-grid-item(2, 2);
+			padding-right: 0;
+			h2 {
+				margin: 0;
+			}
+		}
+	}
+}
+
+/* ****************************** Min-width is 769px ************************************ */
+@media only screen and (min-width: 769px) {
+}
+
+/* ****************************** Min-width is 800px ************************************ */
+@media only screen and (min-width: 800px) {
+
+	// Exposed form voor keuze jaar en inhoud titel van nieuwsartikels
+	form#views-exposed-form-nieuwsartikels-page-1 div.views-exposed-form div.views-exposed-widgets {
+		@include zen-grid-container;
+		$zen-column-count: 6;
+		$zen-gutter-width: 30px;
+		padding-right: 0;
+		div#edit-date-filter-wrapper {
+			@include zen-grid-item(2, 1);
+			padding-left: 0;
+		}
+		div#edit-keys-wrapper {
+			@include zen-grid-item(2, 3);
+		}
+		div.views-submit-button {
+			clear: none;
+			@include zen-grid-item(2, 5);
+			padding-right: 0;
+		}
+	}
+
+	// Exposed form voor keuze inhoud collectie
+	form#views-exposed-form-collectie-page div.views-exposed-form div.views-exposed-widgets {
+		@include zen-grid-container;
+		$zen-column-count: 6;
+		$zen-gutter-width: 30px;
+		div#edit-keys-wrapper {
+			@include zen-grid-item(4, 1);
+			padding-left: 0;
+			clear: none;
+		}
+		div.views-exposed-widget.views-submit-button {
+			@include zen-grid-item(2, 5);
+			padding-right: 0;
+			clear: none;
+		}
+	}
+}
+
+/* ****************************** Min-width is 960px ************************************ */
+@media only screen and (min-width: 960px) {
+
+	div#content h1#page-title {
+		font-size: 1.7em; // h1 groter op groot scherm
+		margin-top: .6em;
+	}
+
+	// Zoekfunctie
+	form#webform-client-form-32 input.form-submit {
+			width: 200px;
+	}
+
+	// Highlightedwrapper
+	div#highlightedwrapper {
+		background: $lichtgrijs;
+		div#highlighted div.region-highlighted div#block-views-kalender-block-3 {
+			display: block;
+			div.view-kalender {
+				@include zen-grid-container;
+				$zen-column-count: 3;
+				$zen-gutter-width: 0;
+				$zen-auto-include-item-base: true;
+				div.view-header {
+					@include zen-grid-item(1, 1);
+					padding: 0 2em;
+				}
+				div.view-content {
+					@include zen-grid-item(1, 2);
+				}
+				div.view-footer {
+					@include zen-grid-item(1, 3);
+					clear: none;
+					display: block;
+					padding-right: 0;
+					p {
+						text-align: center;
+						font-size: 120%;
+						font-weight: bold;
+						text-transform: uppercase;
+						letter-spacing: 2px;
+						// -webkit-animation: bounce 2s;
+						animation: bounce 2s;
+						a {
+							color: $wit;
+							padding: 20px;
+							background: $geel;
+							border: 2px solid $geel;
+							-webkit-transition: all .4s;
+							transition: all .4s;
+							@include border-radius(5px);
+							&:hover, &:focus {
+								color: $geel;
+								background: $wit;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// @-webkit-keyframes bounce {
+	// 0%, 50% {
+	// 	-webkit-transform: translateY(-600px);
+	// 	}
+	// 70% {
+	// 	-webkit-transform: translateY(-600px);
+	// 	-webkit-animation-timing-function: ease-out;
+ //  		}
+	// 80%, 100% {
+ //   		-webkit-transform: translateY(0);
+ //  		}
+	// 90% {
+	// 	-webkit-transform: translateY(-15px);
+	// 	-webkit-animation-timing-function: ease-out;
+ //    	}
+	// }
+	@keyframes bounce {
+	0%, 50% {
+		transform: translateY(-600px);
+		}
+	70% {
+		transform: translateY(-600px);
+		animation-timing-function: ease-out;
+  		}
+	80%, 100% {
+		transform: translateY(0);
+  		}
+	90% {
+		transform: translateY(-15px);
+		animation-timing-function: ease-out;
+    	}
+	}
+
+	// Homepage view Rode Leeuw
+	div#block-views-rode-leeuw-block div.view-rode-leeuw {
+		@include zen-grid-container;
+		$zen-column-count: 2;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		padding-top: 2em;
+		div.view-content {
+			@include zen-grid-item(1, 2);
+			clear: none;
+		}
+		div.view-footer {
+			@include zen-grid-item(1, 1);
+			@include zen-clear();
+			clear: none;
+			padding-top: 2em;
+			p {
+				font-size: 130%;
+				line-height: 2;
+			}
+		}
+	}
+
+	/* Agenda */
+	div.views-field span.field-content div#agendafoto div#omtrek {
+		max-width: 225px;
+		max-height: 133px;
+		overflow: hidden;
+	}
+		
+	// Over ons
+	blockquote {
+		font-size: 160%
+	}
+
+	// View "Jaargangen met inhoud"
+	div.view-tijdschriften div.view-content {
+		@include zen-grid-container;
+		$zen-column-count: 4;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div.views-row-1 {
+			@include zen-grid-item(1, 1);
+		}
+		div.views-row-2 {
+			@include zen-grid-item(1, 2);
+		}
+		div.views-row-3 {
+			clear: none;
+			@include zen-grid-item(1, 3);
+		}
+		div.views-row-4 {
+			@include zen-grid-item(1, 4);
+		}
+	}
+
+	// Node "Nieuwsartikels"
+	article.node-nieuws {
+		@include zen-grid-container;
+		$zen-column-count: 2;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		margin-top: 0;
+		div.field-name-field-afbeelding {
+			@include zen-grid-item(1, 1);
+			clear: none;
+			padding-left: 0;
+		}
+		div.field-name-body {
+			@include zen-grid-item(1, 2);
+			clear: none;
+			padding-right: 0;
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+
+	// View nieuwsarchief
+	div.view-nieuwsartikels.view-display-id-page_1 div.views-row {
+		@include zen-grid-container;
+		$zen-column-count: 3;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div.views-field-field-afbeelding {
+			@include zen-grid-item(1, 1);
+			clear: none;
+			padding-left: 0;
+		}
+		div.views-field-body {
+			@include zen-grid-item(2, 2);
+			clear: none;
+			padding-right: 0;
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+
+	// View Agenda
+	div.view-display-id-page_4.view-kalender div.views-row {
+		//
+		div.views-field span.field-content {
+			@include zen-grid-container;
+			$zen-column-count: 3;
+			$zen-gutter-width: 30px;
+			$zen-auto-include-item-base: true;
+			div#agendafoto {
+				clear: none;
+				@include zen-grid-item(1, 1);
+				padding-left: 0;
+			}
+			div#agendagegevens {
+				clear: none;
+				@include zen-grid-item(2, 2);
+				padding-right: 0;
+			}
+		}
+	}
+
+	// Recentste tijdschrift
+	div#main div#content.column div#contentwrapper div.view.view-recentste-tijdschrift {
+		@include zen-grid-container;
+		$zen-column-count: 3;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div.view-header {
+			@include zen-grid-item(2, 2);
+			padding-right: 0;
+		}
+		div.view-content {
+			clear: none;
+			@include zen-grid-item(1, 1);
+			padding-left: 0;
+		}
+	}
+
+	// Tabellen tijdschrift alfabetisch
+	table.views-table.cols-4 thead tr th.views-field-title {
+		width: 55%;
+	}
+	table.views-table.cols-4 thead tr th.views-field-field-pagina {
+		width: 5%;
+	}
+	table.views-table.cols-4 thead tr th.views-field-field-auteur {
+		width: 20%;
+	}
+	table.views-table.cols-4 thead tr th.views-field-field-tijdschrift {
+		width: 20%;
+	}
+
+	// Exposed form voor keuze inhoud titel en artikel auteur van artikels rode leeuw
+	form#views-exposed-form-artikels-rode-leeuw-page div.views-exposed-form div.views-exposed-widgets {
+		@include zen-grid-container;
+		$zen-column-count: 6;
+		$zen-gutter-width: 30px;
+		div#edit-title-wrapper {
+			@include zen-grid-item(2, 1);
+			padding-left: 0;
+		}
+		div#edit-field-auteur-tid-wrapper {
+			@include zen-grid-item(2, 3);
+		}
+		div.views-submit-button {
+			clear: none;
+			@include zen-grid-item(2, 5);
+			padding-right: 0;
+		}
+	}
+
+// View bidprentjes
+div#bidprentjes {
+	display: block;
+	position: relative;
+	height: 1000px;
+	img { 
+		position: absolute;
+		display: block;
+	}
+	img#bidprentje1 {
+		top: 25%;
+		left: 10%;
+		@include transform(rotate(-6deg));
+		z-index: 2;
+	}
+	img#bidprentje2 {
+		top: 10%;
+		left: 30%;
+		@include transform(rotate(5deg));
+		z-index: 4;
+	}
+	img#bidprentje3 {
+		top: 28%;
+		right: 5%;
+		@include transform(rotate(10deg));
+		z-index: 6;
+	}
+	img#bidprentje4 {
+		top: 35%;
+		left: 25%;
+		@include transform(rotate(-20deg));
+		z-index: 12;
+	}
+	img#bidprentje5 {
+		top: 40%;
+		right: 20%;
+		@include transform(rotate(-13deg));
+		z-index: 10;
+	}
+	img#bidprentje6 {
+		top: 20%;
+		right: 20%;
+		@include transform(rotate(20deg));
+		z-index: 8;
+	}
+}
+
+	// Contactpagina
+	div#contentwrapper div#contactpagina {
+		@include zen-grid-container;
+		$zen-column-count: 2;
+		$zen-gutter-width: 60px;
+		$zen-auto-include-item-base: true;
+		div#lidworden {
+			@include zen-grid-item(1, 1);
+			padding-left: 0;
+			div.field-item {
+				padding: 1em;
+			}
+		}
+		div#lokatie {
+			clear: none;
+			@include zen-grid-item(1, 2);
+			margin-top: 2em;
+			padding-right: 0;
+		}
+		div#contact {
+			@include zen-clear();
+			@include zen-grid-item(2, 1);
+			background: $lichtgrijs url('../images/contact.png') no-repeat 85% 40%;
+			margin-top: 0;
+			form#webform-client-form-32 {
+				//
+				div.webform-component--naam input#edit-submitted-naam,
+				div.webform-component--adres input#edit-submitted-adres,
+				div.webform-component--telefoon input#edit-submitted-telefoon,
+				div.webform-component-email input#edit-submitted-e-mailadres,
+				div.form-textarea-wrapper textarea#edit-submitted-vraag {
+					width: 50%;
+				}
+				div div.form-actions input.webform-submit.button-primary.form-submit {
+					width: 200px;
+				}
+			}
+		}
+	}
+
+	// View "Raad van bestuur"
+	div.view-raad-van-bestuur div.view-content div.views-row div.contactpersoon {
+		@include zen-grid-container;
+		$zen-column-count: 4;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div.contactpersoonafbeelding {
+			@include zen-grid-item(1, 1);
+			padding-left: 0;
+		}
+		div.contactpersoongegevens {
+			@include zen-grid-item(3, 2);
+			padding-right: 0;
+		}
+	}
+
+	// View documentatiecentrum
+	div#main div#content.column div#contentwrapper {
+		@include zen-grid-container;
+		$zen-column-count: 2;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div#block-views-kalender-block-4 {
+			@include zen-grid-item(1, 1);
+			padding-left: 0;
+		}
+		article.node-74 {
+			@include zen-grid-item(1, 2);
+			padding-right: 0;
+		}
+	}
+
+	// View archiefbegeleiding
+	div#main div#content.column div#contentwrapper {
+		@include zen-grid-container;
+		$zen-column-count: 2;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div#block-views-kalender-block-5 {
+			@include zen-grid-item(1, 1);
+			padding-left: 0;
+			h2 {
+				margin-bottom: 2em;
+			}
+		}
+		div#block-block-7 {
+			@include zen-grid-item(1, 2);
+			padding-right: 0;
+			clear: none;
+			h2 {
+				margin-top: 0;
+			}
+		}
+	}
+
+	// Footer
+	div#footer div#footer-top div.region-footer-top {
+		padding-top: 0;
+	}
+}
+
+/* ****************************** Min-width is 1020px ************************************ */
+@media only screen and (min-width: 1020px) {
+
+	// Zoekfunctie
+	div.region-navigation {
+		top: 20px;
+	}
+
+
+	// Slogan
+	div#name-and-slogan {
+		top: -130px;
+		left: 170px;
+		h1#site-name {
+			//
+			a {
+				font-size: 90%;
+			}
+		}
+	}
+
+	// Navigatie
+	div#navwrapper {
+		@include zen-grid-container;
+		$zen-column-count: 7;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		width: 100%;
+		margin: 0 auto;
+		div#logo {
+			@include zen-grid-item(1, 1);
+			a#logo {
+				margin: 0;
+				padding: 0;
+				img {
+					margin: 1em auto 0;
+				}
+			}
+			> img {
+				margin: 1em auto 0;			}
+		}
+		div#navigationwrapper {
+			max-width: 1200px;
+			margin: 0 auto;
+			div#navigation {
+				@include zen-grid-item(6, 2);
+				clear: none;
+				position: relative;
+				nav#main-menu {
+					//
+					a.menu-toggle {
+						display: none;
+					}
+					ul#main-menu {
+						background: $rood;
+						padding-left: 15px;
+						text-align: right;
+						margin-top: 100px;
+						position: initial;
+						li {
+							display: inline-block;
+							float: none;
+							text-transform: uppercase;
+							margin: 0;
+							padding: 0 0 0 5px;
+							border-bottom: 0;
+							a {
+								display: inline;
+								text-transform: uppercase;
+								padding: 12px 0 12px;
+								font-size: 120%;
+								margin-right: 12px;
+								&:link, &:visited {
+									color: $wit;
+								}
+								&:hover, &:focus, &.active {
+									border-bottom: 2px solid  $wit;
+								}
+							}
+							&.active-trail a {
+								border-bottom: 2px solid  $wit;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.responsive-menu .sub-menu {
+		display: none;
+	}
+
+	//IE only
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (ms-min-width: 1020px) {
+	/* IE10+ CSS styles omdat margin-top niet werkt in IE11!! */
+		div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu {
+		margin-top: -43px;
+		}
+	}
+}
+
+/* ****************************** Min-width is 1200px ************************************ */
+@media only screen and (min-width: 1200px) {
+
+	// Homepage nieuws
+	div.view-front-page-kopie div.view-content div#nieuws-homepage{
+		@include zen-grid-container;
+		$zen-column-count: 3;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div#nieuws-afbeelding {
+			@include zen-grid-item(1, 1);
+			clear: none;
+		}
+		div#nieuws-tekst {
+			@include zen-grid-item(2, 2);
+			clear: none;
+			p.created {
+				margin-top: 0;
+			}
+		}
+	}
+
+	// Tabellen tijdschrift alfabetisch
+	table.views-table.cols-4 thead tr th.views-field-title {
+		width: 65%;
+	}
+	table.views-table.cols-4 thead tr th.views-field-field-pagina {
+		width: 5%;
+	}
+	table.views-table.cols-4 thead tr th.views-field-field-auteur {
+		width: 15%;
+	}
+	table.views-table.cols-4 thead tr th.views-field-field-tijdschrift {
+		width: 15%;
+	}
+
+	// Tabellen tijdschrift per nummer
+	table.views-table.cols-3 thead tr th.views-field-title {
+		width: 70%;
+	}
+	table.views-table.cols-3 thead tr th.views-field-field-pagina {
+		width: 10%;
+	}
+	table.views-table.cols-3 thead tr th.views-field-field-auteur {
+		width: 20%;
+	}
+
+	article.node-tijdschrift-rode-leeuw {
+		@include zen-grid-container;
+		$zen-column-count: 4;
+		$zen-gutter-width: 30px;
+		$zen-auto-include-item-base: true;
+		div.field-name-field-afbeelding {
+			@include zen-grid-item(1, 1);
+			padding-left: 0;
+		}
+		div.view-artikelen {
+			@include zen-grid-item(3, 2);
+			padding-right: 0;
+			padding-top: 0;
+			table {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+/* ****************************** Min-width is 1224px ************************************ */
+@media only screen and (min-width: 1224px) {
+	.sidebar-first {
+    /* Padding rechts op 0 zetten */
+	    #content {
+			padding-right: 0;
+	    }
+
+    /* Padding links op 0 zetten */
+    	.region-sidebar-first {
+    		padding-left: 0;
+		}
+	}
+
+	// Navigatie
+	div#navwrapper div#logo {
+			// 
+			a#logo {
+				// 
+				img {
+					margin: 1em 0 0;
+				}
+			}
+			> img {
+				margin: 1em 0 0;			}
+		}
+
+	div#content {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	// Exposed form voor keuze inhoud collectie
+	form#views-exposed-form-collectie-page div.views-exposed-form div.views-exposed-widgets {
+		@include zen-grid-container;
+		$zen-column-count: 6;
+		$zen-gutter-width: 30px;
+		div#edit-keys-wrapper {
+			@include zen-grid-item(4, 1);
+			padding-left: 0;
+		}
+		div.views-exposed-widget.views-submit-button {
+			@include zen-grid-item(2, 5);
+			padding-right: 0;
+		}
+	}
+}
