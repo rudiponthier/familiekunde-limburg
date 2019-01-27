@@ -7,3 +7,6 @@ sites/*/private
 
 # Ignore boost module
 sites/*/boost
+
+# Ignore cache
+cache
