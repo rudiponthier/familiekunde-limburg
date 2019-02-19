@@ -5427,17 +5427,18 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     background: #eaeaea url("../images/contact.png") no-repeat 85% 40%;
     margin-top: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032284}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032285}}
   div#contentwrapper div#contactpagina div#contact form#webform-client-form-32 div.webform-component--naam input#edit-submitted-naam,
-  div#contentwrapper div#contactpagina div#contact form#webform-client-form-32 div.webform-component--adres input#edit-submitted-adres,
+  div#contentwrapper div#contactpagina div#contact form#webform-client-form-32 div.webform-component--straat-en-huisnummer input#edit-submitted-straat-en-huisnummer,
+  div#contentwrapper div#contactpagina div#contact form#webform-client-form-32 div.webform-component--postcode-en-gemeente input#edit-submitted-postcode-en-gemeente,
   div#contentwrapper div#contactpagina div#contact form#webform-client-form-32 div.webform-component--telefoon input#edit-submitted-telefoon,
   div#contentwrapper div#contactpagina div#contact form#webform-client-form-32 div.webform-component-email input#edit-submitted-e-mailadres,
   div#contentwrapper div#contactpagina div#contact form#webform-client-form-32 div.form-textarea-wrapper textarea#edit-submitted-vraag {
     width: 50%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032287}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032288}}
   div#contentwrapper div#contactpagina div#contact form#webform-client-form-32 div div.form-actions input.webform-submit.button-primary.form-submit {
-    width: 200px;
+    width: 50%;
   }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000346}}
@@ -5449,7 +5450,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
   div.view-raad-van-bestuur div.view-content div.views-row div.contactpersoon:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032300}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032301}}
   div.view-raad-van-bestuur div.view-content div.views-row div.contactpersoon div.contactpersoonafbeelding {
     float: left;
     width: 25%;
@@ -5464,7 +5465,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     word-wrap: break-word;
     padding-left: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032304}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032305}}
   div.view-raad-van-bestuur div.view-content div.views-row div.contactpersoon div.contactpersoongegevens {
     float: left;
     width: 75%;
@@ -5489,7 +5490,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
   div#main div#content.column div#contentwrapper:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032317}}
   div#main div#content.column div#contentwrapper div#block-views-kalender-block-4 {
     float: left;
     width: 50%;
@@ -5504,7 +5505,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     word-wrap: break-word;
     padding-left: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032321}}
   div#main div#content.column div#contentwrapper article.node-74 {
     float: left;
     width: 50%;
@@ -5529,7 +5530,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
   div#main div#content.column div#contentwrapper:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032333}}
   div#main div#content.column div#contentwrapper div#block-views-kalender-block-5 {
     float: left;
     width: 50%;
@@ -5544,11 +5545,11 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     word-wrap: break-word;
     padding-left: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032336}}
   div#main div#content.column div#contentwrapper div#block-views-kalender-block-5 h2 {
     margin-bottom: 2em;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032340}}
   div#main div#content.column div#contentwrapper div#block-block-7 {
     float: left;
     width: 50%;
@@ -5564,34 +5565,34 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     padding-right: 0;
     clear: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032344}}
   div#main div#content.column div#contentwrapper div#block-block-7 h2 {
     margin-top: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032351}}
   div#footer div#footer-top div.region-footer-top {
     padding-top: 0;
   }
 }
 /* ****************************** Min-width is 1020px ************************************ */
 @media only screen and (min-width: 1020px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032360}}
   div.region-navigation {
     top: 20px;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032365}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032366}}
   div#name-and-slogan {
     top: -130px;
     left: 170px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032371}}
   div#name-and-slogan h1#site-name a {
     font-size: 90%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032378}}
   div#navwrapper {
     width: 100%;
     margin: 0 auto;
@@ -5605,7 +5606,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
   div#navwrapper:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032385}}
   div#navwrapper div#logo {
     float: left;
     width: 14.28571%;
@@ -5619,25 +5620,25 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032387}}
   div#navwrapper div#logo a#logo {
     margin: 0;
     padding: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032390}}
   div#navwrapper div#logo a#logo img {
     margin: 1em auto 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032394}}
   div#navwrapper div#logo > img {
     margin: 1em auto 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032397}}
   div#navwrapper div#navigationwrapper {
     max-width: 1200px;
     margin: 0 auto;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032400}}
   div#navwrapper div#navigationwrapper div#navigation {
     float: left;
     width: 85.71429%;
@@ -5653,11 +5654,11 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     clear: none;
     position: relative;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032405}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032406}}
   div#navwrapper div#navigationwrapper div#navigation nav#main-menu a.menu-toggle {
     display: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032408}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032409}}
   div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu {
     background: #d50000;
     padding-left: 15px;
@@ -5665,7 +5666,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     margin-top: 100px;
     position: initial;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032414}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032415}}
   div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu li {
     display: inline-block;
     float: none;
@@ -5674,7 +5675,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     padding: 0 0 0 5px;
     border-bottom: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032421}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032422}}
   div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu li a {
     display: inline;
     text-transform: uppercase;
@@ -5682,27 +5683,27 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     font-size: 120%;
     margin-right: 12px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032427}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032428}}
   div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu li a:link, div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu li a:visited {
     color: white;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032430}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032431}}
   div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu li a:hover, div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu li a:focus, div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu li a.active {
     border-bottom: 2px solid white;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032434}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032435}}
   div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu li.active-trail a {
     border-bottom: 2px solid white;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032444}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032445}}
   .responsive-menu .sub-menu {
     display: none;
   }
 }
 @media only screen and (min-width: 1020px) and (-ms-high-contrast: active), only screen and (min-width: 1020px) and (-ms-high-contrast: none), only screen and (min-width: 1020px) and (ms-min-width: 1020px) {
   /* IE10+ CSS styles omdat margin-top niet werkt in IE11!! */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032451}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032452}}
   div#navwrapper div#navigationwrapper div#navigation nav#main-menu ul#main-menu {
     margin-top: -43px;
   }
@@ -5718,7 +5719,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
   div.view-front-page-kopie div.view-content div#nieuws-homepage:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032466}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032467}}
   div.view-front-page-kopie div.view-content div#nieuws-homepage div#nieuws-afbeelding {
     float: left;
     width: 33.33333%;
@@ -5733,7 +5734,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     word-wrap: break-word;
     clear: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032470}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032471}}
   div.view-front-page-kopie div.view-content div#nieuws-homepage div#nieuws-tekst {
     float: left;
     width: 66.66667%;
@@ -5748,42 +5749,42 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     word-wrap: break-word;
     clear: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032473}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032474}}
   div.view-front-page-kopie div.view-content div#nieuws-homepage div#nieuws-tekst p.created {
     margin-top: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032480}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032481}}
   table.views-table.cols-4 thead tr th.views-field-title {
     width: 65%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032483}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032484}}
   table.views-table.cols-4 thead tr th.views-field-field-pagina {
     width: 5%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032486}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032487}}
   table.views-table.cols-4 thead tr th.views-field-field-auteur {
     width: 15%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032489}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032490}}
   table.views-table.cols-4 thead tr th.views-field-field-tijdschrift {
     width: 15%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032494}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032495}}
   table.views-table.cols-3 thead tr th.views-field-title {
     width: 70%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032497}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032498}}
   table.views-table.cols-3 thead tr th.views-field-field-pagina {
     width: 10%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032500}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032501}}
   table.views-table.cols-3 thead tr th.views-field-field-auteur {
     width: 20%;
   }
@@ -5797,7 +5798,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
   article.node-tijdschrift-rode-leeuw:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032509}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032510}}
   article.node-tijdschrift-rode-leeuw div.field-name-field-afbeelding {
     float: left;
     width: 25%;
@@ -5812,7 +5813,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     word-wrap: break-word;
     padding-left: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032513}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032514}}
   article.node-tijdschrift-rode-leeuw div.view-artikelen {
     float: left;
     width: 75%;
@@ -5828,37 +5829,37 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     padding-right: 0;
     padding-top: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032517}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032518}}
   article.node-tijdschrift-rode-leeuw div.view-artikelen table {
     margin-top: 0;
   }
 }
 /* ****************************** Min-width is 1224px ************************************ */
 @media only screen and (min-width: 1224px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032526}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032527}}
   .sidebar-first {
     /* Padding rechts op 0 zetten */
     /* Padding links op 0 zetten */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032528}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032529}}
   .sidebar-first #content {
     padding-right: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032533}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032534}}
   .sidebar-first .region-sidebar-first {
     padding-left: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032543}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032544}}
   div#navwrapper div#logo a#logo img {
     margin: 1em 0 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032547}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032548}}
   div#navwrapper div#logo > img {
     margin: 1em 0 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032551}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032552}}
   div#content {
     padding-left: 0;
     padding-right: 0;
@@ -5873,7 +5874,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
   form#views-exposed-form-collectie-page div.views-exposed-form div.views-exposed-widgets:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032561}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032562}}
   form#views-exposed-form-collectie-page div.views-exposed-form div.views-exposed-widgets div#edit-keys-wrapper {
     float: left;
     width: 66.66667%;
@@ -5888,7 +5889,7 @@ p#back-top a span#button:hover, p#back-top a span#button:focus {
     word-wrap: break-word;
     padding-left: 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032565}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/familiekunde-limburg\/sites\/all\/themes\/familiekundelimburg\/sass\/styles\.scss}line{font-family:\000032566}}
   form#views-exposed-form-collectie-page div.views-exposed-form div.views-exposed-widgets div.views-exposed-widget.views-submit-button {
     float: left;
     width: 33.33333%;

@@ -2278,14 +2278,15 @@ div#bidprentjes {
 			form#webform-client-form-32 {
 				//
 				div.webform-component--naam input#edit-submitted-naam,
-				div.webform-component--adres input#edit-submitted-adres,
+				div.webform-component--straat-en-huisnummer input#edit-submitted-straat-en-huisnummer,
+				div.webform-component--postcode-en-gemeente input#edit-submitted-postcode-en-gemeente,
 				div.webform-component--telefoon input#edit-submitted-telefoon,
 				div.webform-component-email input#edit-submitted-e-mailadres,
 				div.form-textarea-wrapper textarea#edit-submitted-vraag {
 					width: 50%;
 				}
 				div div.form-actions input.webform-submit.button-primary.form-submit {
-					width: 200px;
+					width: 50%;
 				}
 			}
 		}
