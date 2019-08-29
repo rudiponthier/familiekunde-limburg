@@ -8,9 +8,8 @@ files[] = scroll_to_top.js
 configure = admin/config/user-interface/scrolltotop
 
 
-; Information added by drupal.org packaging script on 2012-11-30
-version = "7.x-2.1"
+; Information added by Drupal.org packaging script on 2019-08-13
+version = "7.x-2.2"
 core = "7.x"
 project = "scroll_to_top"
-datestamp = "1354268940"
-
+datestamp = "1565726890"
